@@ -1,0 +1,24 @@
+{
+    "name": "merterbil.in",
+    "version": "1.0.0",
+    "description": "Personal website for showing my skills and projects.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next",
+        "start": "next start",
+        "build": "next build"
+    },
+    "keywords": [
+        "mert erbil",
+        "personal website",
+        "personal blog",
+        "blog"
+    ],
+    "author": "merterbil",
+    "license": "MIT",
+    "dependencies": {
+        "next": "^9.2.1",
+        "react": "^16.12.0",
+        "react-dom": "^16.12.0"
+    }
+}
