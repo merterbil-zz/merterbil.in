@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Font from '../utils/font'
 
 const Layout = ({ children, title }) => (
     <>
@@ -14,5 +15,9 @@ const Layout = ({ children, title }) => (
         </div>
     </>
 )
+
+Layout.ComponentDidMount = () => {
+    Font()
+}
 
 export default Layout
