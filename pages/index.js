@@ -3,7 +3,7 @@ import Layout from '../components/Layout'
 const Index = () => (
     <>
         <Layout>
-            <h1>Yakında...</h1>
+            <h1>Çok yakında...</h1>
         </Layout>
     </>
 )
