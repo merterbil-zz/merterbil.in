@@ -16,12 +16,14 @@
     ],
     "repository": {
         "type": "git",
-        "directory": "https://github.com/merterbil/merterbil.in.git"
+        "directory": "https://github.com/merterbil/merterbil.in.git",
+        "url": "https://merterbil.in"
     },
     "author": "merterbil",
     "license": "MIT",
     "dependencies": {
         "next": "^9.2.1",
+        "next-seo": "^3.4.0",
         "react": "^16.12.0",
         "react-dom": "^16.12.0"
     },

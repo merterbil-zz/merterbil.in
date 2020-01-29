@@ -1,22 +1,15 @@
-import Head from 'next/head'
-
-const Layout = ({ children, title }) => (
+const Layout = ({ children }) => (
     <>
-        <Head>
-            <meta charSet="utf-8" />
-            <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-            <title>{title}</title>
-        </Head>
         <div className="app">
-            <div className="sidebar">
+            <div className="sidebar d-flex flex-row">
                 <div className="avatar">
-                    <img src="/img/mertol_erbil_avatar.jpg" />
+                    <img src="/img/mertol_erbil_avatar.jpg" alt="Mertol Erbil" />
                 </div>
-                <div></div>
+                <div className="nav"></div>
                 <div className="social">
-                    <a href="https://www.linkedin.com/in/blasphx/" target="_blank" rel="noopener" title="linkedin" aria-label="linkedin Mert Erbil">
+                    <a href="https://www.linkedin.com/in/blasphx/" target="_blank" rel="noopener" title="linkedin" aria-label="linkedin Mertol Erbil">
                         <svg viewBox="0 0 24 24">
-                            <path fill="currentColor" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
+                            <path fill="#f4f4f4" d="M21,21H17V14.25C17,13.19 15.81,12.31 14.75,12.31C13.69,12.31 13,13.19 13,14.25V21H9V9H13V11C13.66,9.93 15.36,9.24 16.5,9.24C19,9.24 21,11.28 21,13.75V21M7,21H3V9H7V21M5,3A2,2 0 0,1 7,5A2,2 0 0,1 5,7A2,2 0 0,1 3,5A2,2 0 0,1 5,3Z" />
                         </svg>
                     </a>
                 </div>
@@ -31,13 +24,13 @@ const Layout = ({ children, title }) => (
                 width: 100%;
                 height: 100%;
                 display: grid;
-                grid-template-columns: 4rem calc(100% - 4rem);
+                grid-template-columns: 4rem 1fr;
             }
 
             .sidebar {
                 background-color: #1e262c;
                 display: grid;
-                grid-template-rows: 4rem calc(100% - 8rem) 4rem;
+                grid-template-rows: 4rem 1fr 4rem;
             }
 
             .sidebar .avatar {

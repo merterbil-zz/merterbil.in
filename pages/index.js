@@ -1,8 +1,11 @@
 import Layout from '../components/Layout'
 
+import { NextSeo } from 'next-seo'
+
 const Index = () => (
     <>
-        <Layout title="Home">
+        <NextSeo title="Home" description="Personal website for showing my skills and projects." canonical="https://merterbil.in" />
+        <Layout>
             <div className="page d-flex flex-column align-items-center justify-content-center">
                 <svg className="moon" viewBox="0 0 512 512">
                     <circle className="cls-1" cx="256" cy="256" r="217.6" />
