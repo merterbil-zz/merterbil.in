@@ -1,12 +1,11 @@
-import Layout from '../components/Layout'
-
 import { NextSeo } from 'next-seo'
+import Layout from '../components/Layout'
 
 const Index = () => (
     <>
-        <NextSeo title="Home" description="Personal website for showing my skills and projects." canonical="https://merterbil.in" />
+        <NextSeo titleTemplate="%s | Mert Erbil" title="Welcome" description="Personal website for showing my skills and projects." canonical="https://merterbil.in" />
         <Layout>
-            <div className="page d-flex flex-column align-items-center justify-content-center">
+            <div className="d-flex flex-column align-items-center justify-content-center">
                 <svg className="moon" viewBox="0 0 512 512">
                     <circle className="cls-1" cx="256" cy="256" r="217.6" />
                     <path className="cls-2" d="M374.48,73.52A216.51,216.51,0,0,1,409.6,192c0,120.18-97.42,217.6-217.6,217.6A216.5,216.5,0,0,1,73.52,374.48,217.36,217.36,0,0,0,256,473.6c120.18,0,217.6-97.42,217.6-217.6A217.36,217.36,0,0,0,374.48,73.52Z" />
