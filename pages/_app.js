@@ -4,9 +4,10 @@ import { ThemeProvider } from 'styled-components'
 
 const theme = {
     colors: {
-        primary: '#1e262c',
-        secondary: '#1a2025',
-        textPrimary: '#f4f4f4'
+        bgPrimary: '#181818',
+        bgSecondary: '#1D1D1D',
+        textPrimary: '#CAD8DD',
+        buttonPrimary: '#08FDD8'
     },
 }
 
