@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import { GA_TRACKING_ID } from '../utils/gtag'
 
 class MyDocument extends Document {
 
@@ -34,7 +35,8 @@ class MyDocument extends Document {
                     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
                     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                     <link rel="manifest" href="/site.webmanifest" />
-                    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"></link>
+                    <meta name="google-site-verification" content="EJ7vzGguMODv-G2NknwvnclGho8dJgylbcbE9RuvnfM" />
+                    <script async defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
                 </Head>
                 <body>
                     <Main />

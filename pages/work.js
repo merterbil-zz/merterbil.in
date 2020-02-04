@@ -1,5 +1,7 @@
 import { NextSeo } from 'next-seo'
 import Layout from '../components/Layout'
+import Project from '../components/Project'
+
 import styled from 'styled-components'
 
 const Title = styled.h1`
@@ -11,11 +13,6 @@ const Title = styled.h1`
         line-height: 2.5rem;
     }
 `
-const Text = styled.p`
-    & > a {
-        color: ${({ theme }) => theme.colors.buttonPrimary};
-    }
-`
 const Section = styled.section`
     margin-top: auto;
     margin-bottom: auto;
@@ -25,13 +22,42 @@ const Section = styled.section`
     }
 `
 
+const works = [{
+    title: 'durmaplay.com',
+    description: ''
+}, {
+    title: 'sanalsaray.com',
+    description: ''
+}, {
+    title: 'durmapay.com',
+    description: ''
+}, {
+    title: 'Live chat app',
+    description: ''
+}, {
+    title: 'soydanhaliyikama.com',
+    description: ''
+}, {
+    title: 'kaldirirmi.com',
+    description: ''
+}, {
+    title: 'ERP system for Çekiçler Seramik',
+    description: ''
+}, {
+    title: 'vekfin.com',
+    description: ''
+}, {
+    title: 'Facebook app for Anka Seramik',
+    description: ''
+}]
+
 const Work = () => (
     <>
         <NextSeo titleTemplate="%s | Mert Erbil" title="My work" description="You can see my work on this page." canonical="https://merterbil.in/work" />
         <Layout>
             <Section>
                 <Title>My work</Title>
-                <Text>Page in progress...</Text>
+                {works.map((item, index) => <Project key={index} work={item} />)}
             </Section>
         </Layout>
     </>

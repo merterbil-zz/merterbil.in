@@ -7,10 +7,15 @@ const GlobalStyle = createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Montserrat', 'Halvetica', sans-serif;
+        font-family: 'Halvetica', 'Arial', sans-serif;
         background-color: ${({ theme }) => theme.colors.bgSecondary};
         color: ${({ theme }) => theme.colors.textPrimary};
         font-size: 16px!important;
+    }
+
+    .montserrat,
+    .montserrat body {
+        font-family: Montserrat, sans-serif;
     }
 
     *,
@@ -30,15 +35,8 @@ const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
-
-    [hidden] {
-        display: none;
-        opacity: 0;
-    }
 `
 const App = styled.div`
-    width: 100%;
-    height: 100%;
     display: grid;
     grid-template-columns: 4em 1fr;
     grid-auto-rows: 100vh;
