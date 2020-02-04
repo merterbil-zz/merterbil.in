@@ -37,7 +37,7 @@ class MyDocument extends Document {
                     <link rel="manifest" href="/site.webmanifest" />
                     <meta name="google-site-verification" content="EJ7vzGguMODv-G2NknwvnclGho8dJgylbcbE9RuvnfM" />
                     <script async defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-                    <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_TRACKING_ID}', {page_path: window.location.pathname,});gtag('config', '${AW_CONVERSION_ID}')` }} />
+                    <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_TRACKING_ID}', {page_path: window.location.pathname,});` }} />
                 </Head>
                 <body>
                     <Main />
