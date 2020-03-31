@@ -23,7 +23,7 @@
     "license": "MIT",
     "dependencies": {
         "fontfaceobserver": "^2.1.0",
-        "next": "^9.2.1",
+        "next": "^9.3.2",
         "next-seo": "^3.4.0",
         "react": "^16.12.0",
         "react-dom": "^16.12.0",
