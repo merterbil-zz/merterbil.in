@@ -1,5 +1,4 @@
 import { NextSeo } from 'next-seo'
-import Layout from '../components/Layout'
 import styled from 'styled-components'
 
 const Title = styled.h1`
@@ -37,17 +36,13 @@ const Section = styled.section`
     }
 `
 
-const Index = () => (
-    <>
-        <NextSeo titleTemplate="%s | Mert Erbil" title="Welcome" description="Personal website for showing my skills and projects." canonical="https://merterbil.in" />
-        <Layout>
-            <Section>
-                <Title>Hi,<br />I'm Mert,<br />full-stack web developer.</Title>
-                <Text>Developing web based projects since 2011 with various technologies. Always improving myself and eager to learn.</Text>
-                <Contact href="mailto:mertolerbil@gmail.com" target="_blank" rel="noopener" aria-label="Contact me">Contact me</Contact>
-            </Section>
-        </Layout>
-    </>
-)
+const Index = () => <>
+    <NextSeo titleTemplate="%s | Mert Erbil" title="Welcome" description="Personal website for showing my skills and projects." canonical="https://merterbil.in" />
+    <Section>
+        <Title>Hi,<br />I'm Mert,<br />full-stack web developer.</Title>
+        <Text>Developing web based projects since 2011 with various technologies. Always improving myself and eager to learn.</Text>
+        <Contact href="mailto:mertolerbil@gmail.com" target="_blank" rel="noopener" aria-label="Contact me">Contact me</Contact>
+    </Section>
+</>
 
 export default Index

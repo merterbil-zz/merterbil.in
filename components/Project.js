@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 const Title = styled.h2`
@@ -18,11 +19,9 @@ const Card = styled.div`
     margin-bottom: 1rem;
 `
 
-const Project = ({ work }) => (
-    <Card>
-        <Title>{work.title}</Title>
-        <Description>{work.description}</Description>
-    </Card>
-)
+const Project = ({ work }) => <Card>
+    <Title>{work.title}</Title>
+    <Description>{work.description}</Description>
+</Card>
 
 export default Project

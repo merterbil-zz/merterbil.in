@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import { GA_TRACKING_ID } from '../utils/gtag'
+import { GA_TRACKING_ID } from 'utils/gtag'
 
 class MyDocument extends Document {
 
@@ -36,6 +36,7 @@ class MyDocument extends Document {
                     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
                     <link rel="manifest" href="/site.webmanifest" />
                     <meta name="google-site-verification" content="EJ7vzGguMODv-G2NknwvnclGho8dJgylbcbE9RuvnfM" />
+                    <link rel="preconnect" href="https://www.google-analytics.com" />
                     <script async defer src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
                     <script dangerouslySetInnerHTML={{ __html: `window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '${GA_TRACKING_ID}', {page_path: window.location.pathname,});` }} />
                 </Head>

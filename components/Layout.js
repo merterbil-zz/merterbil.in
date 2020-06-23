@@ -1,6 +1,8 @@
-import { withRouter } from 'next/router'
-import Link from 'next/link'
+import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import styled, { createGlobalStyle } from 'styled-components'
+import Link from 'next/link'
+import Font from 'utils/font'
 
 const GlobalStyle = createGlobalStyle`
     html,
@@ -45,14 +47,6 @@ const SideBar = styled.div`
     background-color: ${({ theme }) => theme.colors.bgPrimary};
     display: grid;
     grid-template-rows: 4rem 1fr 9rem;
-`
-const Avatar = styled.img`
-    object-fit: cover;
-    object-position: center center;
-    width: 3rem;
-    height: 3rem;
-    border-radius: 50%;
-    margin: .5rem;
 `
 const NavLink = styled.a`
     display: grid;
@@ -104,8 +98,12 @@ const Page = styled.main`
     }
 `
 
-const Layout = ({ children, router }) => (
-    <>
+const Layout = ({ children }) => {
+    const router = useRouter()
+
+    useEffect(() => Font(), [])
+
+    return <>
         <GlobalStyle />
         <App>
             <SideBar>
@@ -169,6 +167,6 @@ const Layout = ({ children, router }) => (
             <Page>{children}</Page>
         </App>
     </>
-)
+}
 
-export default withRouter(Layout)
+export default Layout

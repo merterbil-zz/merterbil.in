@@ -1,9 +1,8 @@
+import { useEffect } from 'react'
 import Router from 'next/router'
-import App from 'next/app'
-import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import Font from '../utils/font'
-import { pageView } from '../utils/gtag'
+import { pageView } from 'utils/gtag'
+import Layout from 'components/Layout'
 
 const theme = {
     colors: {
@@ -14,21 +13,19 @@ const theme = {
     },
 }
 
-Router.events.on('routeChangeComplete', url => pageView(url))
+const MyApp = ({ Component, pageProps }) => {
+    useEffect(() => {
+        if (process.env.NODE_ENV !== 'production') return
+        const pageViewEvent = url => pageView(url)
+        Router.events.on('routeChangeComplete', pageViewEvent)
+        return () => Router.events.off('routeChangeComplete', pageViewEvent)
+    }, [])
 
-export default class MyApp extends App {
-
-    componentDidMount() {
-        Font()
-    }
-
-    render() {
-        const { Component, pageProps } = this.props
-        return (
-            <ThemeProvider theme={theme}>
-                <Component {...pageProps} />
-            </ThemeProvider>
-        )
-    }
-
+    return <ThemeProvider theme={theme}>
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+    </ThemeProvider>
 }
+
+export default MyApp

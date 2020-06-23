@@ -1,8 +1,6 @@
 import { NextSeo } from 'next-seo'
-import Layout from '../components/Layout'
-import Project from '../components/Project'
-
 import styled from 'styled-components'
+import Project from 'components/Project'
 
 const Title = styled.h1`
     font-size: 4rem;
@@ -51,16 +49,12 @@ const works = [{
     description: ''
 }]
 
-const Work = () => (
-    <>
-        <NextSeo titleTemplate="%s | Mert Erbil" title="My work" description="You can see my work on this page." canonical="https://merterbil.in/work" />
-        <Layout>
-            <Section>
-                <Title>My work</Title>
-                {works.map((item, index) => <Project key={index} work={item} />)}
-            </Section>
-        </Layout>
-    </>
-)
+const Work = () => <>
+    <NextSeo titleTemplate="%s | Mert Erbil" title="My work" description="You can see my work on this page." canonical="https://merterbil.in/work" />
+    <Section>
+        <Title>My work</Title>
+        {works.map((item, index) => <Project key={index} work={item} />)}
+    </Section>
+</>
 
 export default Work
